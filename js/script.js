@@ -32,7 +32,9 @@ function findLocation(){
 		console.log(data);
 
 		$('#address').text('Address: ' + data.results[0].formatted);
+		var lat=data.results[0].geometry.lat;
 		$('#lat').text('Lattitude: ' + data.results[0].geometry.lat);
+		var lng=data.results[0].geometry.lng;
 		$('#lng').text('Longitude: ' + data.results[0].geometry.lng);
 
 
@@ -42,7 +44,7 @@ var Sunrise = convertTimestamp(data.results[0].annotations.sun.rise.apparent)
          var Sunset = convertTimestamp(data.results[0].annotations.sun.set.apparent)
          $('#apparentset').text('Sunset: ' + Sunset);
 
-
+initMap(lat, lng);
 
 	});
 }
@@ -74,6 +76,17 @@ function convertTimestamp(timestamp) {
 		return time;
 	}
 
+function initMap(lat, lng) {
+	var mapCanvas = document.getElementById('map');
+	var mapOptions = {
+		center: new google.maps.LatLng(lat, lng),
+		zoom:12
+	};
+
+var map =new google.maps.Map(mapCanvas, mapOptions);
+
+	}
+// }
 
 
 // function findLocation(){

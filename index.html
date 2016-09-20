@@ -7,13 +7,24 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+    <script src="https://use.fontawesome.com/c4162de030.js"></script>
 	</head>
 <body>
 
 <div class="content">
 <div class="container">
-	<h1>Location Finder</h1>
-  <h2> Enter a Location </h2>
+	<h1>Location Finder  </h1>
+  <hr class="linehome" width="60%" size="7" margin-top="-5%" color="#808080"/> 
+  
+
+<!--   <h2 class="fa fa-map-marker" aria-hidden="true" id="text"> Enter a Location </h2> -->
+<div id= "text">
+<h2> Enter a Location &nbsp; <i class="fa fa-map-marker" aria-hidden="true"> <span class="sr-only"> (current)</span></i></h2>
+<!-- <h2 class="fa fa-map-marker" aria-hidden="true" > Enter a Location </h2><br> -->
+</div>
+ 
+  
 	<input type='text' id='location'><button id="getit" class="myButton" onclick="findLocation()">Find Details</button>
 	<p id='address'>Address: </p>
 	<p id='lat'>Lattitude: </p>
@@ -27,13 +38,13 @@
   <div id="map"></div>
 
   <style type="text/css">
-  html, body { height: 100%; margin: 0; padding: 0; }
-  #map { height: 100%; }
+  html, body { height: 100%; margin: 0; padding: 10; }
+  #map { height: 90%; }
 </style>
 
 
 
- <script>
+ <!-- <script>
       var map;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
@@ -41,12 +52,11 @@
           zoom: 8
         });
       }
-    </script>
+    </script> -->
 
 
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrxsf1aL9CwxRwxqPzvsoBUF3InIFf6UY&callback=initMap">
-    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKO3RaQtlLnDKVgIBULSu5PBcK3mcTzWU&callback=initMap"
+    async defer></script>
 
 	<script src="js/script.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
