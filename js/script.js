@@ -5,7 +5,7 @@
 var api_key = '614bd81902a73f0d3f6db088fdab4f68'; 
 
 // The end point is the url you request to get data
-var endpoint = 'http://api.opencagedata.com/geocode/v1/json?q=';
+var endpoint = 'https://api.opencagedata.com/geocode/v1/json?q=';
 
 // The full url will be constructed like this
 // http://api.opencagedata.com/geocode/v1/json?q=PLACENAME&key=YOUR-API-KEY
